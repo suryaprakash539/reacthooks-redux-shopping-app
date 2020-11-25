@@ -1,23 +1,25 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "./components/Header";
 import HomeContainer from "./components/HomeContainer";
+import { Container } from "react-bootstrap";
 
 import { initializeProducts } from "./reducers/productReducer";
 
 const App = () => {
+  const products = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(initializeProducts());
-  }, [dispatch]);
+    if (products.length === 0) dispatch(initializeProducts());
+  }, [dispatch, products]);
 
   return (
-    <div>
+    <Container fluid>
       <Header />
       <Route path="/" component={HomeContainer} />
-    </div>
+    </Container>
   );
 };
 

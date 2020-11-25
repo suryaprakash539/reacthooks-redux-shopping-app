@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+
 import { Navbar, Nav } from "react-bootstrap";
 const Header = () => {
   const padding = { marginLeft: "2rem", marginRight: "2rem" };
