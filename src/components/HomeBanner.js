@@ -5,10 +5,10 @@ const HomeBanner = () => {
     <div className="home-banner row">
       <div className="text ">
         <h1>Products</h1>
-        <p>
+        <h4>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
           purus pulvinar, placerat turpis ac, interdum metus.
-        </p>
+        </h4>
       </div>
     </div>
   );

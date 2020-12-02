@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "./components/Header";
 import HomeContainer from "./components/HomeContainer";
-import { Container } from "react-bootstrap";
 
 import { initializeProducts } from "./reducers/productReducer";
 
@@ -16,10 +15,10 @@ const App = () => {
   }, [dispatch, products]);
 
   return (
-    <Container fluid>
+    <div>
       <Header />
       <Route path="/" component={HomeContainer} />
-    </Container>
+    </div>
   );
 };
 

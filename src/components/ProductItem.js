@@ -23,7 +23,9 @@ const ProductItem = ({ product, addToCart }) => {
           />
           <Card.Body>
             <Card.Title>{product.title.slice(0, 20)}</Card.Title>
-            <Card.Text>Price: Rs. {product.price}</Card.Text>
+            <Card.Text>
+              <h4>Price: Rs. {product.price}</h4>
+            </Card.Text>
             <Button variant="primary" onClick={() => addToCart(product)}>
               Buy Now
             </Button>
